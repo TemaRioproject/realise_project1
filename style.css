@@ -1,0 +1,206 @@
+/* Фон сайта */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://cdn.filtergrade.com/wp-content/uploads/2019/12/28151408/40-Black-Wood-Background-Textures-8.png');
+    background-size: cover; /* Фон будет полностью занимать всю страницу */
+    background-position: center;
+    background-attachment: fixed; /* Фон остаётся на месте при прокрутке */
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Для размещения футера внизу */
+}
+
+/* Стандартные стили сайта */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Центрирование контента */
+.center-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.center-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: white; /* Цвет текста изменён на белый */
+}
+
+/* Кнопки */
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.github-btn, .instagram-btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GITHUB кнопка с изображением */
+.github-btn {
+    background-image: url('https://static35.tgcnt.ru/posts/_0/81/81d7468fed0082343117a5a82730a3f1.jpg');
+    background-size: cover; /* Изображение полностью покрывает кнопку */
+    background-position: center; /* Центрирование фона */
+    width: 100px; /* Ширина кнопки */
+    height: 100px; /* Высота кнопки */
+    border: none; /* Убираем рамки */
+    text-indent: -9999px; /* Убираем текст, но оставляем кнопку активной */
+}
+
+.github-btn:hover {
+    opacity: 0.8; /* При наведении кнопка станет слегка прозрачной */
+}
+
+/* Instagram кнопка с новым изображением фона */
+.instagram-btn {
+    background-image: url('https://renzobassi.wordpress.com/wp-content/uploads/2019/08/sfondo-sfumatura.jpg?w=1336&h=417&crop=1');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* Стрелка и надпись "Заходи" */
+.arrow-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.arrow-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white; /* Цвет текста изменён на белый */
+}
+
+.arrow {
+    font-size: 32px;
+    color: white; /* Цвет стрелки изменён на белый */
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Создатели внизу */
+.creators-footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    text-align: center;
+}
+
+.creators {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+    .center-section h1 {
+        font-size: 36px;
+    }
+    .button-container {
+        flex-direction: column;
+    }
+    .github-btn, .instagram-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .center-section h1 {
+        font-size: 28px;
+    }
+
+    .github-btn, .instagram-btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .center-section h1 {
+        font-size: 24px;
+    }
+
+    .github-btn, .instagram-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .creators {
+        font-size: 14px;
+    }
+}
+
+@keyframes animation  {
+  50% {
+    transform: scale(1.5);
+  }
+}
